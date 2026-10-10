@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpdateFit - Entrenamiento</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+
+        <h1 class="logo">UpdateFit</h1>
+
+        <nav>
+            <ul class="menu">
+                <li><a class="menu-enlace" href="index.html">Inicio</a></li>
+                <li><a class="menu-enlace activo" href="training.html">Entrenamiento</a></li>
+                <li><a class="menu-enlace" href="nutrition.html">Nutrición</a></li>
+                <li><a class="menu-enlace" href="healthy-habits.html">Hábitos</a></li>
+                <li><a class="menu-enlace" href="about.html">Sobre nosotros</a></li>
+                <li><a class="menu-enlace" href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="contenido">
+
+       
+
+        <h2 class="titulo">Encuentra tu plan</h2>
+
+        <p class="texto">
+            Elige tus preferencias y encuentra el plan
+            que mejor se adapta a tus objetivos.
+        </p>
+
+        <form class="formulario">
+
+            <fieldset class="grupo">
+
+                <legend>Datos personales</legend>
+
+                <label class="etiqueta" for="nombre">Nombre:</label>
+                <input class="campo" type="text" id="nombre" name="nombre">
+
+                <p class="etiqueta">Sexo:</p>
+
+                <label class="opcion">
+                    <input type="radio" name="sexo" value="femenino">
+                    Femenino
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="sexo" value="masculino">
+                    Masculino
+                </label>
+
+            </fieldset>
+
+            <fieldset class="grupo">
+
+                <legend>Elige tu plan</legend>
+
+                <div class="planes">
+
+                    <label class="plan">
+                        <input type="radio" name="plan" value="basico">
+                        <span class="plan-nombre">Plan Básico</span>
+                        <span class="plan-texto">Plan de nutrición y entrenamiento para comenzar.</span>
+                        <span class="plan-precio">35 €/mes</span>
+                    </label>
+
+                    <label class="plan">
+                        <input type="radio" name="plan" value="completo">
+                        <span class="plan-nombre">Plan Completo</span>
+                        <span class="plan-texto">Plan personalizado de nutrición y entrenamiento.</span>
+                        <span class="plan-precio">50 €/mes</span>
+                    </label>
+
+                    <label class="plan">
+                        <input type="radio" name="plan" value="pro">
+                        <span class="plan-nombre">Plan Pro</span>
+                        <span class="plan-texto">Seguimiento personalizado y objetivos específicos.</span>
+                        <span class="plan-precio">85 €/mes</span>
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+            <button class="boton-enviar" type="submit">Elegir mi plan</button>
+
+        </form>
+
+    </main>
+
+    <footer class="pie">
+
+        <p>&copy; 2026 UpdateFit. Todos los derechos reservados.</p>
+
+    </footer>
+
+</body>
+
+</html>
