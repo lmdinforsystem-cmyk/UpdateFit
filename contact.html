@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpdateFit - Contacto</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+
+        <h1 class="logo">UpdateFit</h1>
+
+        <nav>
+            <ul class="menu">
+                <li><a class="menu-enlace" href="index.html">Inicio</a></li>
+                <li><a class="menu-enlace" href="training.html">Entrenamiento</a></li>
+                <li><a class="menu-enlace" href="nutrition.html">Nutrición</a></li>
+                <li><a class="menu-enlace" href="healthy-habits.html">Hábitos</a></li>
+                <li><a class="menu-enlace" href="about.html">Sobre nosotros</a></li>
+                <li><a class="menu-enlace activo" href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="contenido">
+
+        <h2 class="titulo">Contacto</h2>
+
+        <form class="formulario">
+
+            <fieldset class="grupo">
+
+                <legend>Datos personales</legend>
+
+                <label class="etiqueta" for="nombre">Nombre:</label>
+                <input class="campo" type="text" id="nombre" name="nombre" required>
+
+                <label class="etiqueta" for="email">Email:</label>
+                <input class="campo" type="email" id="email" name="email" required>
+
+            </fieldset>
+
+            <fieldset class="grupo">
+
+                <legend>Tu mensaje</legend>
+
+                <label class="etiqueta" for="mensaje">Mensaje:</label>
+                <textarea class="campo" id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            </fieldset>
+
+            <button class="boton-enviar" type="submit">Enviar</button>
+
+        </form>
+
+    </main>
+
+    <footer class="pie">
+
+        <p>&copy; 2026 UpdateFit. Todos los derechos reservados.</p>
+
+    </footer>
+
+</body>
+
+</html>
