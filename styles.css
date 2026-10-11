@@ -22,7 +22,9 @@ body {
     background-color: #fffaf4;
     color: #3d4447;
     line-height: 1.6;
-    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
 }
 
 
@@ -71,20 +73,30 @@ body {
     background-color: var(--color-general);
 }
 
-/*imagen principal*/
+/*main de index*/
 
 
-.portada img{
-    width: 50%;
-    height: auto;
+.portada {
+   display: flex;
+   flex-direction: column;
+   gap: 24px; 
+   padding: 35px 20px;
+   background-color: #f0f7f2;
     
-   
 }
+
+/*texto de la portada*/
+.portada-texto {
+    width: 100%;
+}
+
 
 /* Contenido principal  */
 
 .contenido {
     padding: 30px 16px;
+    flex: 1;
+    width: 100%;
 }
 
 .titulo {
@@ -92,13 +104,84 @@ body {
     color: var(--color-titulo);
 }
 
-.texto {
+/*texto sobre titulo*/
+
+.subtitulo{
+    margin-bottom:10px ;
+    color: var(--color-titulo);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+/*IMAGEN DE LA PORTADA*/
+
+.imagen-portada{
+    display: block;
+    width: 100%;
+    height: 260px;
+    border-radius: 16px;
+    object-fit:cover ;
+}
+ 
+/*estlios de h2*/
+.portada .titulo{
+    font-size: 2rem;
+    line-height: 1.2;
     margin-bottom: 16px;
 }
-/* lista de nutrición y buenos hábitos*/
 
-.lista {
-    margin: 0 0 20px 20px;
+/*Estilos del párrafo*/
+.texto {
+    margin-bottom: 20px;
+}
+
+
+/*-------------------------------------
+ lista de nutrición y buenos hábitos
+ --------------------------------------*/
+/* Tarjetas de consejos (nutrition.html) */
+
+.consejos {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.consejo {
+    background-color: var(--color-general);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.consejo:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.consejo-imagen {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.consejo-texto {
+    padding: 16px;
+    font-weight: bold;
+}
+
+/* Bloque destacado  nutricion */
+
+.destacado {
+    margin-top: 40px;
+    padding: 30px 20px;
+    background-color: #f0f7f2;
+    border-radius: 20px;
+    text-align: center;
 }
 
 
@@ -272,13 +355,57 @@ legend {
     }
 
     .contenido {
-        max-width: 760px;
+        max-width: 1100px;
         margin: 0 auto;
         padding: 50px 20px;
     }
 
+    .portada{
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        padding: 50px 40px;
+        border-radius: 20px;
+    }
+
+    .portada-texto{
+        flex: 1;
+    }
+
+    .imagen-portada{
+        flex: 1;
+        min-width: 0;
+        height: 360px;
+    }
+    
     .boton-enviar {
         width: auto;
         padding: 12px 30px;
     }
+
+
+    /*nutricion*/
+
+    .consejos {
+        grid-template-columns: repeat(4, 1fr);
+       
+    }
+
+    .consejo-imagen {
+        height: 260px;
+    }
+    /*formulario contacto*/
+
+        /* contacto */
+
+    .formulario-contacto {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .formulario-contacto legend {
+        margin: 0 auto;
+    }
+
+
 }
