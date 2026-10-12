@@ -1,9 +1,10 @@
 /* ==========================================
-   UpdateFit - Hoja de estilos
+   UpdateFit 
+   Diseño Mobile First 
    ========================================== */
 
 
-/* Estilos generales  */
+/* ---------- 1. Estilos generales ---------- */
 
 * {
     box-sizing: border-box;
@@ -11,7 +12,7 @@
     padding: 0;
 }
 
-:root{
+:root {
     --primary-color: #c8ecdf;
     --color-titulo: #2f7a63;
     --color-general: #ffffff;
@@ -24,16 +25,17 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 
-/*  Cabecera */
+/* ---------- 2. Cabecera ---------- */
 
 .cabecera {
     position: sticky;
     top: 0;
-    background-color:var(--primary-color);
+    z-index: 10;
+    background-color: var(--primary-color);
     padding: 16px;
     text-align: center;
 }
@@ -44,7 +46,7 @@ body {
 }
 
 
-/*  Menú de navegación  */
+/* ---------- 3. Menú de navegación ---------- */
 
 .menu {
     list-style: none;
@@ -68,30 +70,13 @@ body {
     background-color: var(--color-general);
 }
 
-/* La página en el que estamos se marca en blanco */
+/* La página en la que estamos se marca en blanco */
 .activo {
     background-color: var(--color-general);
 }
 
-/*main de index*/
 
-
-.portada {
-   display: flex;
-   flex-direction: column;
-   gap: 24px; 
-   padding: 35px 20px;
-   background-color: #f0f7f2;
-    
-}
-
-/*texto de la portada*/
-.portada-texto {
-    width: 100%;
-}
-
-
-/* Contenido principal  */
+/* ---------- 4. Contenido principal ---------- */
 
 .contenido {
     padding: 30px 16px;
@@ -104,44 +89,132 @@ body {
     color: var(--color-titulo);
 }
 
-/*texto sobre titulo*/
-
-.subtitulo{
-    margin-bottom:10px ;
+/* Texto pequeño sobre el título */
+.subtitulo {
+    margin-bottom: 10px;
     color: var(--color-titulo);
     font-size: 0.85rem;
     font-weight: bold;
     letter-spacing: 2px;
-
 }
 
-/*IMAGEN DE LA PORTADA*/
-
-.imagen-portada{
-    display: block;
-    width: 100%;
-    height: 260px;
-    border-radius: 16px;
-    object-fit:cover ;
-}
- 
-/*estlios de h2*/
-.portada .titulo{
-    font-size: 2rem;
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-/*Estilos del párrafo*/
 .texto {
     margin-bottom: 20px;
 }
 
 
-/*-------------------------------------
- lista de nutrición y buenos hábitos
- --------------------------------------*/
-/* Tarjetas de consejos (nutrition.html) */
+/* ---------- 5. Botón de enlace ---------- */
+
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background-color: #ffdcc8;
+    color: #3d4447;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.boton:hover {
+    background-color: #ffc4a3;
+}
+
+
+/* ---------- 6. Portada (index.html) ---------- */
+
+.portada {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px 20px;
+    background-color: #f0f7f2;
+    border-radius: 20px;
+}
+
+/* Selector combinado: título dentro de la portada */
+.portada .titulo {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.portada {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(240, 247, 242, 0.88), rgba(240, 247, 242, 0.88)),
+                      url("asset/img/portada.jpg");
+    background-size: cover;
+    background-position: right center;
+}
+
+
+/* ---------- 7. Servicios (index.html) ---------- */
+
+.titulo-seccion {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.servicios {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.servicio {
+    padding: 18px;
+    background-color: var(--color-general);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.servicio:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Número dentro de un círculo */
+
+.servicio-numero {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--color-titulo);
+    font-weight: bold;
+}
+
+.servicio-titulo {
+    margin-bottom: 4px;
+    color: var(--color-titulo);
+}
+
+/* Selector combinado: menos espacio bajo el texto de la tarjeta */
+.servicio .texto {
+    margin-bottom: 8px;
+}
+
+.servicio-enlace {
+    color: var(--color-titulo);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.servicio-enlace:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- 8. Consejos (nutrition.html) ---------- */
 
 .consejos {
     list-style: none;
@@ -169,12 +242,20 @@ body {
     object-fit: cover;
 }
 
-.consejo-texto {
-    padding: 16px;
-    font-weight: bold;
+.consejo-titulo {
+    padding: 16px 16px 0 16px;
+    color: var(--color-titulo);
+    font-size: 1.1rem;
 }
 
-/* Bloque destacado  nutricion */
+.consejo-texto {
+
+    padding: 8px 16px 20px 16px;
+}
+
+
+
+/* ---------- 9. Bloque destacado ---------- */
 
 .destacado {
     margin-top: 40px;
@@ -185,28 +266,9 @@ body {
 }
 
 
-/*  Botón de enlace -*/
-
-.boton {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 24px;
-    background-color: #ffdcc8;
-    color: #3d4447;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 20px;
-}
-
-.boton:hover {
-    background-color: #ffc4a3;
-}
-
-
-/* -Formularios  */
+/* ---------- 10. Formularios ---------- */
 
 .grupo {
-
     background-color: var(--color-general);
     border: 1px solid #e6e1da;
     border-radius: 12px;
@@ -215,7 +277,6 @@ body {
 }
 
 legend {
-
     padding: 2px 12px;
     background-color: #e3dcf7;
     border-radius: 20px;
@@ -223,13 +284,11 @@ legend {
 }
 
 .etiqueta {
-
     display: block;
     margin-bottom: 6px;
 }
 
 .campo {
-
     width: 100%;
     padding: 10px;
     margin-bottom: 14px;
@@ -240,28 +299,24 @@ legend {
 }
 
 .campo:focus {
-
     outline: none;
     border-color: #9fd8c4;
 }
 
 #mensaje {
-
     resize: vertical;
 }
 
 .opcion {
-
     display: inline-block;
     margin: 0 20px 14px 0;
     cursor: pointer;
 }
 
 .boton-enviar {
-
     width: 100%;
     padding: 12px;
-    background-color: var(--color-titulo) ;
+    background-color: var(--color-titulo);
     color: var(--color-general);
     border: none;
     border-radius: 20px;
@@ -275,73 +330,81 @@ legend {
 }
 
 
-/* Tarjetas de planes training.*/
+/* ---------- 11. Planes (training.html) ---------- */
+
+.planes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+}
 
 .plan {
-
     display: block;
     position: relative;
-    padding: 16px 16px 16px 46px;
-    margin-bottom: 12px;
     background-color: #e3dcf7;
-    border-radius: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     cursor: pointer;
 }
 
 .plan:hover {
-
     background-color: #d4caf2;
 }
 
-/* Selector combinado: el radio dentro de cada plan */
-.plan input {
+/* Selector combinado: el radio en la esquina de la tarjeta */
 
+.plan input {
     position: absolute;
-    top: 20px;
-    left: 16px;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.plan-imagen {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
 .plan-nombre {
-
     display: block;
+    padding: 16px 16px 4px 16px;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
 .plan-texto {
-
     display: block;
-    margin-bottom: 6px;
+    padding: 0 16px 8px 16px;
 }
 
 .plan-precio {
-
+    display: block;
+    padding: 0 16px 16px 16px;
     font-weight: bold;
-    color: #2f7a63;
+    color: var(--color-titulo);
 }
 
 
-/* Pie de página  */
+/* ---------- 12. Pie de página ---------- */
 
 .pie {
-    
     background-color: #e3dcf7;
     text-align: center;
     padding: 16px;
     font-size: 0.9rem;
 }
 
-.planes {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 12px;
-}
 
-
-/* Tablet y escritorio  */
+/* ---------- 13. Tablet y escritorio ---------- */
 
 @media (min-width: 768px) {
+
+    /* Cabecera */
 
     .cabecera {
         display: flex;
@@ -354,49 +417,57 @@ legend {
         margin-bottom: 0;
     }
 
+    /* Contenido */
+
     .contenido {
         max-width: 1100px;
         margin: 0 auto;
-        padding: 50px 20px;
+        padding: 30px 20px;
     }
 
-    .portada{
+    /* Index: portada */
+
+    .portada {
         flex-direction: row;
         align-items: center;
         gap: 40px;
-        padding: 50px 40px;
-        border-radius: 20px;
+        padding: 30px;
     }
 
-    .portada-texto{
+    .portada-texto {
         flex: 1;
     }
 
-    .imagen-portada{
-        flex: 1;
-        min-width: 0;
-        height: 360px;
-    }
-    
-    .boton-enviar {
-        width: auto;
-        padding: 12px 30px;
+
+    .portada .titulo {
+        font-size: 2.6rem;
     }
 
+    .servicios {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-    /*nutricion*/
+    /* Nutrición */
 
     .consejos {
         grid-template-columns: repeat(4, 1fr);
-       
     }
 
     .consejo-imagen {
         height: 260px;
     }
-    /*formulario contacto*/
 
-        /* contacto */
+    /* Entrenamiento */
+
+    .planes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .plan-imagen {
+        height: 220px;
+    }
+
+    /* Contacto */
 
     .formulario-contacto {
         max-width: 600px;
@@ -407,5 +478,24 @@ legend {
         margin: 0 auto;
     }
 
+    .boton-enviar {
+        width: auto;
+        padding: 12px 30px;
+    }
+/* la imagen de fondo en index tiene una degradacion de colores desde la iizquierda */
+    .portada {
+        min-height: 480px;
+        padding: 40px;
+        align-items: center;
+        justify-content: flex-start;
+        background-image: linear-gradient(to right,
+                              rgba(240, 247, 242, 1) 30%,
+                              rgba(240, 247, 242, 0.6) 50%,
+                              rgba(240, 247, 242, 0) 70%),
+                          url("asset/img/portada.jpg");
+    }
 
+    .portada-texto {
+        max-width: 45%;
+    }
 }
