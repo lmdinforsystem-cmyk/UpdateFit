@@ -6,6 +6,8 @@
 
 /* ---------- 1. Estilos generales ---------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +21,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
     background-color: #fffaf4;
     color: #3d4447;
     line-height: 1.6;
@@ -139,6 +141,8 @@ body {
     margin-bottom: 16px;
 }
 
+/*La portada en el index tiene una imagen que degrada sus colores*/
+
 .portada {
     display: flex;
     flex-direction: column;
@@ -199,6 +203,7 @@ body {
 }
 
 /* Selector combinado: menos espacio bajo el texto de la tarjeta */
+
 .servicio .texto {
     margin-bottom: 8px;
 }
@@ -292,15 +297,17 @@ legend {
     width: 100%;
     padding: 10px;
     margin-bottom: 14px;
-    border: 2px solid #e6e1da;
+    border: 2px solid #b9cfc6;
     border-radius: 8px;
+    background-color: #f4faf7;
     font-family: inherit;
     font-size: 1rem;
 }
 
 .campo:focus {
     outline: none;
-    border-color: #9fd8c4;
+    border-color: var(--color-titulo);
+    background-color: var(--color-general);
 }
 
 #mensaje {
@@ -387,8 +394,19 @@ legend {
     padding: 0 16px 16px 16px;
     font-weight: bold;
     color: var(--color-titulo);
+
 }
 
+/*--------------13. sobre nosotros about.html--------*/
+
+.historia-video {
+    display: block;
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    margin: 0 auto;
+    
+}
 
 /* ---------- 12. Pie de página ---------- */
 
@@ -482,7 +500,7 @@ legend {
         width: auto;
         padding: 12px 30px;
     }
-/* la imagen de fondo en index tiene una degradacion de colores desde la iizquierda */
+ /* la imagen de fondo en index tiene una degradacion de colores desde la iizquierda */
     .portada {
         min-height: 480px;
         padding: 40px;
@@ -497,5 +515,13 @@ legend {
 
     .portada-texto {
         max-width: 45%;
+    }
+
+  /*About video */
+
+    .historia-video {
+        flex: 0.8;
+        min-width: 0;
+        height: auto;
     }
 }
